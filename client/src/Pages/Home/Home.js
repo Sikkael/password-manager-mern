@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function Home()
 {
     const { name, isAuthenticated } = useSelector(state => state);
-
+    
     return (
         <div className="home">
 

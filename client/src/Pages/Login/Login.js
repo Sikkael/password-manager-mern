@@ -61,6 +61,7 @@ function Login()
 
   useEffect(() =>
   {
+    console.log("Salut de Login");
     isAuthenticated && history.replace("/");
   }, [isAuthenticated, history]);
 

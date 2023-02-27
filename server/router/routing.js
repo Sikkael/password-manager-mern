@@ -172,7 +172,6 @@ router.get("/logout", (req, res) =>
 router.post("/decrypt", (req, res) =>
 {
     const { iv, encryptedPassword } = req.body;
-
     return res.status(200).send(decrypt(encryptedPassword, iv));
 })
 

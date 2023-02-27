@@ -72,10 +72,11 @@ function Passwords() {
           draggable: true,
           progress: undefined,
         });
-
+     
         setPlatform("");
         setPlatEmail("");
         setPlatPass("");
+        
       }
     } catch (error) {
       console.log(error);
@@ -83,8 +84,10 @@ function Passwords() {
   };
 
   useEffect(() => {
-    !isAuthenticated && history.replace("/signin");
+    console.log("Salut de Password");
+    !isAuthenticated && history.push("/passwords");
   }, [isAuthenticated, history]);
+  
 
   return (
     <div className="passwords">
@@ -142,7 +145,7 @@ function Passwords() {
       <hr />
 
       <div className="passwords__list">
-        {passwords?.length !== 0 ? (
+        {passwords?.length !== 0  ? (
           passwords?.map((data) => {
             return (
               <Password
